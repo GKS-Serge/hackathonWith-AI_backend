@@ -1,0 +1,2320 @@
+{
+    "meta": {
+        "source_document": "Academie_referentiel_programmes_Togo_backend.docx",
+        "source_label": "Sama School — Catalogue public Togo (à vérifier)",
+        "statut_validation_defaut": "A_VERIFIER",
+        "note_statut": "Relevé catalogue public Sama School Togo : non certifié ministériellement, à valider avec les maquettes officielles et la réforme de septembre 2022.",
+        "total_niveaux": 3,
+        "total_parcours": 8,
+        "total_parcours_matieres": 47,
+        "total_chapitres": 484
+    },
+    "niveaux": [
+        {
+            "nom": "Seconde",
+            "ordre": 1
+        },
+        {
+            "nom": "Première",
+            "ordre": 2
+        },
+        {
+            "nom": "Terminale",
+            "ordre": 3
+        }
+    ],
+    "series": [
+        {
+            "code": "A4",
+            "libelle": "Série A4 - Lettres et Sciences Humaines"
+        },
+        {
+            "code": "S",
+            "libelle": "Série S - Scientifique (Seconde)"
+        },
+        {
+            "code": "C",
+            "libelle": "Série C - Mathématiques et Sciences Physiques"
+        },
+        {
+            "code": "D",
+            "libelle": "Série D - Sciences de la Vie et de la Terre"
+        }
+    ],
+    "parcours": [
+        {
+            "nom": "Seconde A4",
+            "niveau": "Seconde",
+            "serie": "A4",
+            "matieres": [
+                {
+                    "ordre": 1,
+                    "nom": "Anglais",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Chieftaincy in Togo (la chefferie traditionnelle au Togo)"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Chieftaincy in Africa (la chefferie en Afrique)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Girls' education (l'éducation de la jeune fille)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Women's place in the family today (la place de la femme dans la famille)"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Bushfires and deforestation (feux de brousse et déforestation)"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Dumping grounds in our communities (les dépotoirs sauvages)"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "The effects of WhatsApp on the youth (les effets de WhatsApp sur les jeunes)"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Solar energy in Africa (l'énergie solaire en Afrique)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "The youth and the law (la jeunesse et la loi)"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Communal labour (les travaux communautaires)"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Conflicts among communities (les conflits entre communautés)"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Child labour (le travail des enfants)"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Traditional values (les valeurs traditionnelles)"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Grammaire : les conditionnelles de type 1 et 2"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Grammaire : les temps du présent et du passé"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 2,
+                    "nom": "SVT",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Les êtres vivants dans leur milieu"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les équilibres naturels"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "La nutrition minérale des plantes vertes"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "La nutrition carbonée des plantes vertes : la photosynthèse"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 3,
+                    "nom": "ECM",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Civilité et civisme"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Notion d'État et de nation"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Les régimes politiques"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "La séparation des pouvoirs"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "L'État de droit et la République"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La Constitution et les lois"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Les droits humains : notion, catégories et évolution"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Instruments et mécanismes de protection des droits humains"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Démocratie, droit de suffrage et bonne gouvernance"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Médias et démocratie"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Le débat démocratique à l'école"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "La gestion du patrimoine"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "La paix et la non-violence"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Sécurité, insécurité ; guerre et paix"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Les conflits : causes et modalités de gestion"
+                        },
+                        {
+                            "ordre": 16,
+                            "titre": "Les problèmes environnementaux"
+                        },
+                        {
+                            "ordre": 17,
+                            "titre": "La protection de l'environnement"
+                        },
+                        {
+                            "ordre": 18,
+                            "titre": "Les tabacs, drogues et stupéfiants"
+                        },
+                        {
+                            "ordre": 19,
+                            "titre": "Les IST et le VIH/sida"
+                        },
+                        {
+                            "ordre": 20,
+                            "titre": "La parenté responsable"
+                        },
+                        {
+                            "ordre": 21,
+                            "titre": "Les catastrophes naturelles : concepts clés et causes"
+                        },
+                        {
+                            "ordre": 22,
+                            "titre": "Les catastrophes naturelles : manifestations et conséquences"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 4,
+                    "nom": "Allemand",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Willkommen in Afrika : prononcer l'allemand, saluer et se présenter"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "In der Schule : la famille, les origines et l'école"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Le nom : genre, articles et pluriel"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Sein, haben et le présent des verbes"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Herzlichen Glückwunsch ! : fêtes, invitations et vœux"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Probier mal ! : l'heure du repas"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Gute Besserung ! : la santé"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Poser une question et y répondre"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Besuch im Dorf : ville et campagne"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Unser Deutschclub : les clubs culturels à l'école"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Schönes Wochenende ! : les loisirs"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom": "Seconde S",
+            "niveau": "Seconde",
+            "serie": "S",
+            "matieres": [
+                {
+                    "ordre": 1,
+                    "nom": "SVT",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Les êtres vivants dans leur milieu"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les équilibres naturels"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "La nutrition minérale des plantes vertes"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "La nutrition carbonée des plantes vertes : la photosynthèse"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "L'origine et l'évolution des sols"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La géologie historique : stratigraphie et paléontologie"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 2,
+                    "nom": "Anglais",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Chieftaincy in Togo (la chefferie traditionnelle au Togo)"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Chieftaincy in Africa (la chefferie en Afrique)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Girls' education (l'éducation de la jeune fille)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Women's place in the family today (la place de la femme dans la famille)"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Bushfires and deforestation (feux de brousse et déforestation)"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Dumping grounds in our communities (les dépotoirs sauvages)"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "The effects of WhatsApp on the youth (les effets de WhatsApp sur les jeunes)"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Solar energy in Africa (l'énergie solaire en Afrique)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "The youth and the law (la jeunesse et la loi)"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Communal labour (les travaux communautaires)"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Conflicts among communities (les conflits entre communautés)"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Child labour (le travail des enfants)"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Traditional values (les valeurs traditionnelles)"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Grammaire : les conditionnelles de type 1 et 2"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Grammaire : les temps du présent et du passé"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 3,
+                    "nom": "Français",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "L'homme et son environnement : les éléments de l'argumentation"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "La dissertation littéraire : introduction et plan détaillé"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Les connecteurs logiques et les termes d'articulation"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le sens des mots : dénotation et connotation"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Sagesse et humanisme africains : la littérature négro-africaine"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La fiche de lecture d'une œuvre au programme"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Les marques de l'énonciation"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Les valeurs du conditionnel et du subjonctif"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Arts et loisirs : l'image et la communication"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Le personnage de théâtre"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "L'écriture d'invention"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Le triomphe de l'esprit critique : le rationalisme"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Les richesses stylistiques : les figures de style"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "L'accord de l'adjectif qualificatif"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "L'accord du participe passé"
+                        },
+                        {
+                            "ordre": 16,
+                            "titre": "L'accord du verbe avec le sujet"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 4,
+                    "nom": "ECM",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Civilité et civisme"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Notion d'État et de nation"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Les régimes politiques"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "La séparation des pouvoirs"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "L'État de droit et la République"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La Constitution et les lois"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Les droits humains : notion, catégories et évolution"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Instruments et mécanismes de protection des droits humains"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Démocratie, droit de suffrage et bonne gouvernance"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Médias et démocratie"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Le débat démocratique à l'école"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "La gestion du patrimoine"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "La paix et la non-violence"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Sécurité, insécurité ; guerre et paix"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Les conflits : causes et modalités de gestion"
+                        },
+                        {
+                            "ordre": 16,
+                            "titre": "Les problèmes environnementaux"
+                        },
+                        {
+                            "ordre": 17,
+                            "titre": "La protection de l'environnement"
+                        },
+                        {
+                            "ordre": 18,
+                            "titre": "Les tabacs, drogues et stupéfiants"
+                        },
+                        {
+                            "ordre": 19,
+                            "titre": "Les IST et le VIH/sida"
+                        },
+                        {
+                            "ordre": 20,
+                            "titre": "La parenté responsable"
+                        },
+                        {
+                            "ordre": 21,
+                            "titre": "Les catastrophes naturelles : concepts clés et causes"
+                        },
+                        {
+                            "ordre": 22,
+                            "titre": "Les catastrophes naturelles : manifestations et conséquences"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom": "Première A4",
+            "niveau": "Première",
+            "serie": "A4",
+            "matieres": [
+                {
+                    "ordre": 1,
+                    "nom": "Mathématiques",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Équations et inéquations dans ℝ"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Généralités sur les fonctions"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Limites d'une fonction"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Dérivée et étude de fonctions"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Étude complète d'une fonction"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Suites numériques"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Dénombrement"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Statistiques à une variable"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 2,
+                    "nom": "Histoire",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "L'Afrique à la veille des poussées impérialistes"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les poussées impérialistes en Afrique"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Le partage de l'Afrique"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Les résistances en Afrique"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La collaboration des souverains avec les Allemands au Togo : Djobo Boukari Ouro-Esso"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La résistance des souverains togolais : Nabiéma Asabiè et Aja Kpoyizoun"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "La résistance des peuples du Togo : les Tové et les Konkomba"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Le Togo sous mandat de la SDN administré par la France (1922-1946)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le Togo sous tutelle de l'ONU administré par la France (1946-1960)"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 3,
+                    "nom": "Géographie",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "La dynamique démographique dans le monde et au Togo"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "L'accroissement de la population mondiale"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Les migrations, un enjeu de développement durable"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le dynamisme urbain à l'échelle mondiale"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La métropolisation des villes africaines : le cas de Lomé"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Les TIC, un facteur clé du développement durable en Afrique et au Togo"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "L'entrepreneuriat au Togo"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "L'artisanat au Togo"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le littoral togolais, une interface dynamique"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 4,
+                    "nom": "Anglais",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "The Commonwealth (le Commonwealth)"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Different types of regimes (les différents régimes politiques)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Women and occupations (la femme et l'emploi)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Pre-established gender roles (les rôles liés au genre)"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Water pollution (la pollution de l'eau)"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Hunting and national parks (la chasse et les parcs nationaux)"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "The Internet (l'internet)"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Cybercrime (la cybercriminalité)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Love for the fatherland (l'amour de la patrie)"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Preserving our cultural heritage (préserver notre héritage culturel)"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Women inheritance problems in Togo (l'héritage des femmes au Togo)"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Parental irresponsibility (l'irresponsabilité parentale)"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Art and tourism (l'art et le tourisme)"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Grammaire : exprimer le contraste (however, yet) et les connecteurs"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Grammaire : la voix passive"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 5,
+                    "nom": "Physique",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "L'énergie électrique et sa conservation"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "La réflexion de la lumière"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "La réfraction et la dispersion de la lumière"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Les lentilles minces et leurs applications"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 6,
+                    "nom": "Chimie",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Réactions chimiques et énergie thermique"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "L'oxydoréduction : données fondamentales"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Applications de l'oxydoréduction : la pile Daniell"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Applications de l'oxydoréduction : l'électrolyse"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 7,
+                    "nom": "SVT",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Les constituants de la matière des êtres vivants"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "L'organisation de la cellule"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Les échanges cellulaires"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Les divisions cellulaires : la mitose"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Les divisions cellulaires : la méiose"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La respiration"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 8,
+                    "nom": "ECM",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Notions de citoyenneté et de nationalité"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Droits et responsabilités du citoyen togolais"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Entrepreneuriat : élaboration de projet"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Promotion du genre et condition de la femme"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Décentralisation : relations entre la région, la préfecture et la commune"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Problèmes spécifiques liés aux droits humains"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Organisations de défense des droits humains"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom": "Première C",
+            "niveau": "Première",
+            "serie": "C",
+            "matieres": [
+                {
+                    "ordre": 1,
+                    "nom": "Histoire",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "L'Afrique à la veille des poussées impérialistes"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les poussées impérialistes en Afrique"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Le partage de l'Afrique"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Les résistances en Afrique"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La collaboration des souverains avec les Allemands au Togo : Djobo Boukari Ouro-Esso"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La résistance des souverains togolais : Nabiéma Asabiè et Aja Kpoyizoun"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "La résistance des peuples du Togo : les Tové et les Konkomba"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Le Togo sous mandat de la SDN administré par la France (1922-1946)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le Togo sous tutelle de l'ONU administré par la France (1946-1960)"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 2,
+                    "nom": "Géographie",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "La dynamique démographique dans le monde et au Togo"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "L'accroissement de la population mondiale"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Les migrations, un enjeu de développement durable"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le dynamisme urbain à l'échelle mondiale"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La métropolisation des villes africaines : le cas de Lomé"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Les TIC, un facteur clé du développement durable en Afrique et au Togo"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "L'entrepreneuriat au Togo"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "L'artisanat au Togo"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le littoral togolais, une interface dynamique"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 3,
+                    "nom": "Anglais",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "The Commonwealth (le Commonwealth)"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Different types of regimes (les différents régimes politiques)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Women and occupations (la femme et l'emploi)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Pre-established gender roles (les rôles liés au genre)"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Water pollution (la pollution de l'eau)"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Hunting and national parks (la chasse et les parcs nationaux)"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "The Internet (l'internet)"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Cybercrime (la cybercriminalité)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Love for the fatherland (l'amour de la patrie)"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Preserving our cultural heritage (préserver notre héritage culturel)"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Women inheritance problems in Togo (l'héritage des femmes au Togo)"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Parental irresponsibility (l'irresponsabilité parentale)"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Art and tourism (l'art et le tourisme)"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Grammaire : exprimer le contraste (however, yet) et les connecteurs"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Grammaire : la voix passive"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 4,
+                    "nom": "Français",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "La versification"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les figures de style"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Champs lexicaux, tonalités et marques de la subjectivité"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le commentaire composé : introduction, analyse, corps du devoir, conclusion"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Le commentaire de texte"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Les mutations de la société africaine : le roman négro-africain"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Les termes d'articulation et la cohérence textuelle"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "La dissertation littéraire"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le résumé de texte"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "La fiche de lecture"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Écriture et société : l'implicite et la situation de communication"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "L'accord du verbe avec son sujet"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "L'accord du participe passé"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 5,
+                    "nom": "ECM",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Notions de citoyenneté et de nationalité"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Droits et responsabilités du citoyen togolais"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Entrepreneuriat : élaboration de projet"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Promotion du genre et condition de la femme"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Décentralisation : relations entre la région, la préfecture et la commune"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Problèmes spécifiques liés aux droits humains"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Organisations de défense des droits humains"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom": "Première D",
+            "niveau": "Première",
+            "serie": "D",
+            "matieres": [
+                {
+                    "ordre": 1,
+                    "nom": "Mathématiques",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Équations et inéquations du second degré dans ℝ"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Systèmes d'équations linéaires dans ℝ² et dans ℝ³"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Fonctions numériques d'une variable réelle : généralités"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Limites et continuité"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Dérivation"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Étude de fonctions"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Suites numériques"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Angles orientés"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Trigonométrie"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Barycentres et lignes de niveau"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Droites et cercles"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Étude de l'orthogonalité dans l'espace"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Homothéties"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Isométries"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Similitudes"
+                        },
+                        {
+                            "ordre": 16,
+                            "titre": "Série statistique double"
+                        },
+                        {
+                            "ordre": 17,
+                            "titre": "Dénombrement"
+                        },
+                        {
+                            "ordre": 18,
+                            "titre": "Probabilité"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 2,
+                    "nom": "SVT",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "La tectonique globale"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les grandes formations géologiques du Togo"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Les constituants de la matière des êtres vivants"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "L'organisation de la cellule"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Les échanges cellulaires"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Les divisions cellulaires : la mitose"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Les divisions cellulaires : la méiose"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "La respiration"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Les fermentations"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 3,
+                    "nom": "Histoire",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "L'Afrique à la veille des poussées impérialistes"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les poussées impérialistes en Afrique"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Le partage de l'Afrique"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Les résistances en Afrique"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La collaboration des souverains avec les Allemands au Togo : Djobo Boukari Ouro-Esso"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La résistance des souverains togolais : Nabiéma Asabiè et Aja Kpoyizoun"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "La résistance des peuples du Togo : les Tové et les Konkomba"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Le Togo sous mandat de la SDN administré par la France (1922-1946)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le Togo sous tutelle de l'ONU administré par la France (1946-1960)"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 4,
+                    "nom": "Géographie",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "La dynamique démographique dans le monde et au Togo"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "L'accroissement de la population mondiale"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Les migrations, un enjeu de développement durable"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le dynamisme urbain à l'échelle mondiale"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La métropolisation des villes africaines : le cas de Lomé"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Les TIC, un facteur clé du développement durable en Afrique et au Togo"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "L'entrepreneuriat au Togo"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "L'artisanat au Togo"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le littoral togolais, une interface dynamique"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 5,
+                    "nom": "Anglais",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "The Commonwealth (le Commonwealth)"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Different types of regimes (les différents régimes politiques)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Women and occupations (la femme et l'emploi)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Pre-established gender roles (les rôles liés au genre)"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Water pollution (la pollution de l'eau)"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Hunting and national parks (la chasse et les parcs nationaux)"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "The Internet (l'internet)"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Cybercrime (la cybercriminalité)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Love for the fatherland (l'amour de la patrie)"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Preserving our cultural heritage (préserver notre héritage culturel)"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Women inheritance problems in Togo (l'héritage des femmes au Togo)"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Parental irresponsibility (l'irresponsabilité parentale)"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Art and tourism (l'art et le tourisme)"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Grammaire : exprimer le contraste (however, yet) et les connecteurs"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Grammaire : la voix passive"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 6,
+                    "nom": "Français",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "La versification"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les figures de style"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Champs lexicaux, tonalités et marques de la subjectivité"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le commentaire composé : introduction, analyse, corps du devoir, conclusion"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Le commentaire de texte"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Les mutations de la société africaine : le roman négro-africain"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Les termes d'articulation et la cohérence textuelle"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "La dissertation littéraire"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le résumé de texte"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "La fiche de lecture"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Écriture et société : l'implicite et la situation de communication"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "L'accord du verbe avec son sujet"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "L'accord du participe passé"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 7,
+                    "nom": "ECM",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Notions de citoyenneté et de nationalité"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Droits et responsabilités du citoyen togolais"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Entrepreneuriat : élaboration de projet"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Promotion du genre et condition de la femme"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Décentralisation : relations entre la région, la préfecture et la commune"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Problèmes spécifiques liés aux droits humains"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Organisations de défense des droits humains"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom": "Terminale A4",
+            "niveau": "Terminale",
+            "serie": "A4",
+            "matieres": [
+                {
+                    "ordre": 1,
+                    "nom": "Physique",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Gravitation, satellites"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Sources d'énergie"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Propagation d'une onde"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Nature de la lumière"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Réactions nucléaires"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 2,
+                    "nom": "Chimie",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Cinétique chimique"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Réactions de substitution (alcanes)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Réactions d'addition (alcènes et alcynes)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Réactions d'oxydation ménagée, d'élimination et de condensation"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Polymères"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 3,
+                    "nom": "SVT",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Le matériel génétique : ADN, ARN, duplication"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "La transmission des caractères héréditaires"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "L'hérédité humaine : pedigrees, drépanocytose, groupes sanguins, hémophilie"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "La gamétogenèse"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La fécondation et l'implantation de l'œuf"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "L'immunologie : le soi et le non-soi"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "L'immunologie : les réponses immunitaires"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "L'activité cardiaque et la pression artérielle"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 4,
+                    "nom": "Histoire",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "L'ONU : naissance, fonctionnement, bilan et perspectives"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Le monde bipolaire : naissance et crises de la guerre froide"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Le monde bipolaire : de la détente à la fin de la guerre froide"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le monde de 1991 à nos jours"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Les facteurs de la décolonisation de l'Afrique"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La décolonisation du Togo"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "L'évolution politique du Togo de 1960 à 2005"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 5,
+                    "nom": "Anglais",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Democracy in the USA (la démocratie aux États-Unis)"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Different political regimes (les régimes politiques)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Women's role in entrepreneurship (les femmes et l'entrepreneuriat)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Global warming (le réchauffement climatique)"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Farming in modern society (l'agriculture moderne)"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "E-commerce (le commerce en ligne)"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "E-learning (étudier en ligne)"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Respect of state property (le respect des biens publics)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Patriotic acts (les actes patriotiques)"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Land issues (les problèmes fonciers)"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "The value of traditional arts in Togo (la valeur de l'art traditionnel au Togo)"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Violent extremism (l'extrémisme violent)"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Grammaire : had better, would rather"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "Grammaire : la voix passive"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "Grammaire : le discours indirect"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 6,
+                    "nom": "ECM",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Notions de génocides et de violences de masse"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Causes, manifestations et conséquences des génocides"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Prévention des génocides et des violences de masse"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le débat démocratique à l'école"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La gestion du patrimoine de l'établissement"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Entrepreneuriat : élaboration d'un projet"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Juxtaposition des territorialités et répartition des compétences"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Relation entre environnement, santé et développement"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom": "Terminale C",
+            "niveau": "Terminale",
+            "serie": "C",
+            "matieres": [
+                {
+                    "ordre": 1,
+                    "nom": "Physique",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Cinématique du point"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Mouvement du centre d'inertie"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Interaction gravitationnelle"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Mouvement d'un projectile dans le champ de pesanteur ; particule chargée dans un champ électrique uniforme"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Oscillations mécaniques"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Champ magnétique"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Mouvement d'une particule chargée dans un champ magnétique uniforme"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Action d'un champ magnétique sur un circuit parcouru par un courant : loi de Laplace"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Induction électromagnétique et auto-induction"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Circuit RLC série en régime sinusoïdal forcé"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Interférences"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Niveaux d'énergie atomique"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Réactions nucléaires"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 2,
+                    "nom": "Chimie",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Alcools"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Acides carboxyliques et dérivés"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Polymères synthétiques"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Solutions aqueuses d'acide chlorhydrique et d'hydroxyde de sodium"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "pH et autoprotolyse de l'eau"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Notion de couples acide-base ; classification"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Réactions acide-base ; dosage acidobasique"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Cinétique chimique"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 3,
+                    "nom": "Histoire",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "L'ONU : naissance, fonctionnement, bilan et perspectives"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Le monde bipolaire : naissance et crises de la guerre froide"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Le monde bipolaire : de la détente à la fin de la guerre froide"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le monde de 1991 à nos jours"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Les facteurs de la décolonisation de l'Afrique"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La décolonisation du Togo"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "L'évolution politique du Togo de 1960 à 2005"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 4,
+                    "nom": "Anglais",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Different political regimes (les régimes politiques)"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Women's roles in entrepreneurship (les femmes et l'entrepreneuriat)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Renewable energies (les énergies renouvelables)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Farming in modern society (l'agriculture moderne)"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Artificial intelligence and modern society (l'intelligence artificielle)"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Phytotherapy and health (la phytothérapie et la santé)"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Patriotic acts (les actes patriotiques)"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Violent extremism (l'extrémisme violent)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Grammaire : had better, would rather"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Grammaire : la voix passive"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 5,
+                    "nom": "SVT",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Le matériel génétique : l'ADN"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "La transmission des caractères héréditaires"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "L'hérédité humaine : transmission d'un caractère"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "L'hérédité humaine : le sexe et les groupes sanguins"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La gamétogenèse"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La fécondation"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Le tissu nerveux : structure"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Le tissu nerveux : propriétés"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "L'immunologie"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "L'activité cardiaque et la pression artérielle"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 6,
+                    "nom": "ECM",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Notions de génocides et de violences de masse"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Causes, manifestations et conséquences des génocides"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Prévention des génocides et des violences de masse"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le débat démocratique à l'école"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La gestion du patrimoine de l'établissement"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Entrepreneuriat : élaboration d'un projet"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Juxtaposition des territorialités et répartition des compétences"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Relation entre environnement, santé et développement"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom": "Terminale D",
+            "niveau": "Terminale",
+            "serie": "D",
+            "matieres": [
+                {
+                    "ordre": 1,
+                    "nom": "Mathématiques",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Nombres complexes"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Compléments sur les limites, la continuité et la dérivation"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Suites numériques"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Exemples d'étude de fonction"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Fonctions logarithmes"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Fonctions exponentielles et puissances"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Primitives"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Calcul intégral"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Équations différentielles"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Géométrie analytique de l'espace"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Similitudes directes"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "Notions de théorie des graphes"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "Probabilité"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 2,
+                    "nom": "Physique",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Cinématique du point"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Mouvement du centre d'inertie"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Interaction gravitationnelle"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Mouvement d'un projectile dans le champ de pesanteur ; particule chargée dans un champ électrique uniforme"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Oscillations mécaniques"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Champ magnétique"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Mouvement d'une particule chargée dans un champ magnétique uniforme"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Auto-induction électromagnétique"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Circuit RLC série en régime sinusoïdal forcé"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Niveaux d'énergie atomique"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "Réactions nucléaires"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 3,
+                    "nom": "Chimie",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Alcools"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Les amines"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Acides carboxyliques et dérivés"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Acides α-aminés"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Solutions aqueuses d'acide chlorhydrique et d'hydroxyde de sodium"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "pH et autoprotolyse de l'eau"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Notion de couples acide-base ; classification"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Réactions acidobasiques ; dosage acide-base"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Cinétique chimique"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 4,
+                    "nom": "Histoire",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "L'ONU : naissance, fonctionnement, bilan et perspectives"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Le monde bipolaire : naissance et crises de la guerre froide"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Le monde bipolaire : de la détente à la fin de la guerre froide"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le monde de 1991 à nos jours"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Les facteurs de la décolonisation de l'Afrique"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La décolonisation du Togo"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "L'évolution politique du Togo de 1960 à 2005"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 5,
+                    "nom": "Anglais",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Different political regimes (les régimes politiques)"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Women's roles in entrepreneurship (les femmes et l'entrepreneuriat)"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Renewable energies (les énergies renouvelables)"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Farming in modern society (l'agriculture moderne)"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "Artificial intelligence and modern society (l'intelligence artificielle)"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Phytotherapy and health (la phytothérapie et la santé)"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Patriotic acts (les actes patriotiques)"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Violent extremism (l'extrémisme violent)"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Grammaire : had better, would rather"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Grammaire : la voix passive"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 6,
+                    "nom": "SVT",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Le matériel génétique : l'ADN"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "La transmission des caractères héréditaires"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "L'hérédité humaine : transmission d'un caractère"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "L'hérédité humaine : le sexe et les groupes sanguins"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La gamétogenèse"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "La régulation des cycles sexuels chez l'Homme"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "La fécondation et les premières étapes de la vie chez l'Homme"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "La reproduction chez les Spermaphytes"
+                        },
+                        {
+                            "ordre": 9,
+                            "titre": "Le tissu nerveux : structure"
+                        },
+                        {
+                            "ordre": 10,
+                            "titre": "Le tissu nerveux : propriétés"
+                        },
+                        {
+                            "ordre": 11,
+                            "titre": "La physiologie du muscle strié squelettique"
+                        },
+                        {
+                            "ordre": 12,
+                            "titre": "L'immunologie"
+                        },
+                        {
+                            "ordre": 13,
+                            "titre": "L'infection par le VIH"
+                        },
+                        {
+                            "ordre": 14,
+                            "titre": "La régulation du milieu intérieur"
+                        },
+                        {
+                            "ordre": 15,
+                            "titre": "La régulation de la glycémie"
+                        },
+                        {
+                            "ordre": 16,
+                            "titre": "L'activité cardiaque et la pression artérielle"
+                        }
+                    ]
+                },
+                {
+                    "ordre": 7,
+                    "nom": "ECM",
+                    "chapitres": [
+                        {
+                            "ordre": 1,
+                            "titre": "Notions de génocides et de violences de masse"
+                        },
+                        {
+                            "ordre": 2,
+                            "titre": "Causes, manifestations et conséquences des génocides"
+                        },
+                        {
+                            "ordre": 3,
+                            "titre": "Prévention des génocides et des violences de masse"
+                        },
+                        {
+                            "ordre": 4,
+                            "titre": "Le débat démocratique à l'école"
+                        },
+                        {
+                            "ordre": 5,
+                            "titre": "La gestion du patrimoine de l'établissement"
+                        },
+                        {
+                            "ordre": 6,
+                            "titre": "Entrepreneuriat : élaboration d'un projet"
+                        },
+                        {
+                            "ordre": 7,
+                            "titre": "Juxtaposition des territorialités et répartition des compétences"
+                        },
+                        {
+                            "ordre": 8,
+                            "titre": "Relation entre environnement, santé et développement"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
