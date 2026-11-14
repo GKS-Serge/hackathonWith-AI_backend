@@ -1,0 +1,66 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: scholarship_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-hackathon_db}
+      POSTGRES_USER: ${DB_USERNAME:-scholarship_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Définissez DB_PASSWORD dans votre fichier .env avant de démarrer Docker}
+    ports:
+      - "${PGSQL_EXTERNAL_PORT:-5433}:5432"
+    volumes:
+      - scholarship_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-scholarship_user} -d ${DB_DATABASE:-hackathon_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - scholarship_network
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scholarship_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    env_file:
+      - .env
+    environment:
+      APP_ENV: ${APP_ENV:-local}
+      APP_URL: ${APP_URL:-http://localhost:8000}
+      DB_CONNECTION: pgsql
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: ${DB_DATABASE:-hackathon_db}
+      DB_USERNAME: ${DB_USERNAME:-scholarship_user}
+      DB_PASSWORD: ${DB_PASSWORD:?Définissez DB_PASSWORD dans votre fichier .env avant de démarrer Docker}
+      RUN_MIGRATIONS: ${RUN_MIGRATIONS:-true}
+      RUN_SEEDERS: ${RUN_SEEDERS:-false}
+    volumes:
+      - scholarship_storage_logs:/var/www/html/storage/logs
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8000/api/niveaux >/dev/null || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      - scholarship_network
+
+volumes:
+  scholarship_pgdata:
+    driver: local
+  scholarship_storage_logs:
+    driver: local
+
+networks:
+  scholarship_network:
+    driver: bridge
