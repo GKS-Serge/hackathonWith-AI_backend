@@ -42,4 +42,12 @@ return [
         'timeout' => (int) env('GEMINI_TIMEOUT', 30),
     ],
 
+    'youtube' => [
+        'key' => env('YOUTUBE_API_KEY'),
+        'base_url' => env('YOUTUBE_API_BASE_URL', 'https://www.googleapis.com/youtube/v3'),
+        'timeout' => (int) env('YOUTUBE_TIMEOUT', 15),
+        'cache_ttl_search' => (int) env('YOUTUBE_CACHE_TTL_SEARCH', 86400), // 24 heures en secondes
+        'cache_ttl_details' => (int) env('YOUTUBE_CACHE_TTL_DETAILS', 604800), // 7 jours en secondes
+    ],
+
 ];

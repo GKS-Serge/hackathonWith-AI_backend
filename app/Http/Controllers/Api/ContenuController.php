@@ -178,11 +178,23 @@ class ContenuController extends Controller
 
     /**
      * Liste les vidéos d'un chapitre avec leur transcription éventuelle.
+     * Vérifie le cloisonnement par parcours pour l'étudiant connecté.
      */
-    public function videosByChapitre(Chapitre $chapitre): JsonResponse
+    public function videosByChapitre(Request $request, Chapitre $chapitre): JsonResponse
     {
+        $etudiant = $request->user();
+        if ($etudiant && $etudiant->parcours_id) {
+            $chapitre->loadMissing('parcoursMatiere');
+            if ($chapitre->parcoursMatiere && $chapitre->parcoursMatiere->parcours_id !== $etudiant->parcours_id) {
+                return response()->json([
+                    'message' => 'Ce chapitre ne fait pas partie de votre parcours scolaire.',
+                ], 403);
+            }
+        }
+
         $videos = Video::with('transcription')
             ->where('chapitre_id', $chapitre->id)
+            ->where('est_integrable', true)
             ->orderBy('id')
             ->get();
 
@@ -194,10 +206,20 @@ class ContenuController extends Controller
 
     /**
      * Affiche le détail d'une vidéo avec sa transcription et les résumés de cette transcription.
+     * Vérifie le cloisonnement par parcours pour l'étudiant connecté.
      */
-    public function showVideo(Video $video): JsonResponse
+    public function showVideo(Request $request, Video $video): JsonResponse
     {
         $video->load(['chapitre.parcoursMatiere.matiere', 'transcription.resumes']);
+
+        $etudiant = $request->user();
+        if ($etudiant && $etudiant->parcours_id && $video->chapitre && $video->chapitre->parcoursMatiere) {
+            if ($video->chapitre->parcoursMatiere->parcours_id !== $etudiant->parcours_id) {
+                return response()->json([
+                    'message' => 'Cette vidéo ne fait pas partie de votre parcours scolaire.',
+                ], 403);
+            }
+        }
 
         return response()->json([
             'video' => $video,
@@ -213,7 +235,7 @@ class ContenuController extends Controller
             ->where('video_id', $video->id)
             ->first();
 
-        if (! $transcription) {
+        if (!$transcription) {
             return response()->json([
                 'message' => 'Aucune transcription disponible pour cette vidéo.',
             ], 404);

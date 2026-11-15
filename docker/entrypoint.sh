@@ -1,45 +1,40 @@
-#!/usr/bin/env bash
+#!/bin/sh
 set -e
 
-cd /var/www/html
+# ==============================================================================
+# SCHOLARSHIP / ACADÉMIE - Docker Entrypoint (Laravel 12 + PHP 8.3-FPM)
+# Exécuté à l'initialisation du conteneur backend
+# ==============================================================================
 
-# Assurer les permissions d'écriture sur les volumes montés
-chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache || true
-chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache || true
+# 1. Vérification et création des répertoires vitaux de stockage si absents
+mkdir -p /var/www/html/storage/framework/cache/data \
+         /var/www/html/storage/framework/sessions \
+         /var/www/html/storage/framework/views \
+         /var/www/html/storage/logs \
+         /var/www/html/bootstrap/cache
 
-# Génération automatique de APP_KEY uniquement si absente dans l'environnement
-if [ -z "${APP_KEY:-}" ] && [ -f .env ] && ! grep -qE '^APP_KEY=base64:' .env; then
-    php artisan key:generate --force --no-interaction
+# 2. Sécurisation des permissions d'écriture pour l'utilisateur d'exécution www-data
+# Dossiers en 775 et fichiers en 664 (séparation stricte sans bit d'exécution sur les fichiers plats)
+find /var/www/html/storage /var/www/html/bootstrap/cache -type d -exec chmod 775 {} + 2>/dev/null || true
+find /var/www/html/storage /var/www/html/bootstrap/cache -type f -exec chmod 664 {} + 2>/dev/null || true
+
+# 3. Installation conditionnelle des dépendances Composer :
+# Exécuté UNIQUEMENT si le volume vendor est vide (absence de vendor/autoload.php).
+# Ne se relance JAMAIS aux démarrages ultérieurs.
+if [ ! -f /var/www/html/vendor/autoload.php ]; then
+    echo "[INFO] vendor/autoload.php absent. Premier démarrage détecté : exécution de composer install..."
+    composer install --no-interaction --prefer-dist --optimize-autoloader --no-progress
+    echo "[INFO] Dépendances Composer installées avec succès dans le volume persistant."
 fi
 
-# Attente active de la disponibilité de PostgreSQL
-if [ "${DB_CONNECTION:-pgsql}" = "pgsql" ]; then
-    DB_HOST_VAL="${DB_HOST:-postgres}"
-    DB_PORT_VAL="${DB_PORT:-5432}"
-    DB_USER_VAL="${DB_USERNAME:-scholarship_user}"
-    DB_NAME_VAL="${DB_DATABASE:-hackathon_db}"
-
-    echo "Attente de PostgreSQL sur ${DB_HOST_VAL}:${DB_PORT_VAL}..."
-    until pg_isready -h "${DB_HOST_VAL}" -p "${DB_PORT_VAL}" -U "${DB_USER_VAL}" -d "${DB_NAME_VAL}" >/dev/null 2>&1; do
-        sleep 2
+# 4. Attente active de la disponibilité réseau de PostgreSQL avant de lancer PHP-FPM
+if [ -n "$DB_HOST" ]; then
+    echo "[INFO] Attente de la disponibilité de la base de données ($DB_HOST:${DB_PORT:-5432})..."
+    until nc -z -w3 "$DB_HOST" "${DB_PORT:-5432}" >/dev/null 2>&1; do
+        sleep 1
     done
-    echo "PostgreSQL est prêt."
+    echo "[INFO] PostgreSQL est prêt et joignable sur le réseau privé Docker !"
 fi
 
-# Exécution sécurisée et non destructive des migrations en attente (opt-in par variable)
-if [ "${RUN_MIGRATIONS:-true}" = "true" ]; then
-    echo "Application des migrations Laravel non destructives..."
-    php artisan migrate --force --no-interaction
-fi
-
-# Seed idempotent optionnel (désactivé par défaut afin de préserver tout état existant)
-if [ "${RUN_SEEDERS:-false}" = "true" ]; then
-    echo "Exécution des seeders idempotents..."
-    php artisan db:seed --force --no-interaction
-fi
-
-# Nettoyage des caches de config/route pour prendre en compte les variables d'environnement Docker
-php artisan config:clear >/dev/null 2>&1 || true
-php artisan route:clear >/dev/null 2>&1 || true
-
+# 5. Lancement de la commande principale (php-fpm par défaut)
 exec "$@"

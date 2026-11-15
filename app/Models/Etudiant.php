@@ -41,6 +41,11 @@ class Etudiant extends Authenticatable
         return $this->mot_de_passe_hash;
     }
 
+    public function isEtudiant(): bool
+    {
+        return true;
+    }
+
     public function parcoursScolaire(): BelongsTo
     {
         return $this->belongsTo(ParcoursScolaire::class, 'parcours_id');

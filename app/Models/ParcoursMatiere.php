@@ -26,6 +26,11 @@ class ParcoursMatiere extends Model
         return $this->belongsTo(ParcoursScolaire::class, 'parcours_id');
     }
 
+    public function parcours(): BelongsTo
+    {
+        return $this->belongsTo(ParcoursScolaire::class, 'parcours_id');
+    }
+
     public function matiere(): BelongsTo
     {
         return $this->belongsTo(Matiere::class, 'matiere_id');

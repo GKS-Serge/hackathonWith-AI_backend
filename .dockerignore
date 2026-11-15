@@ -1,28 +1,40 @@
-.git
-.github
-.gitignore
-.gitattributes
+# ==============================================================================
+# SCHOLARSHIP / ACADÉMIE - Docker Ignore
+# Exclusions strictes pour garantir sécurité, propreté et étanchéité de l'image
+# ==============================================================================
+
+# Fichiers d'environnement et secrets (JAMAIS dans l'image)
 .env
 .env.*
-!.env.example
 !.env.docker.example
-vendor
-node_modules
-public/build
-public/hot
-public/storage
-storage/*.key
-storage/logs/*.log
-storage/framework/cache/data/*
+
+# Référentiel Word source privé (strictement préservé hors image)
+storage/app/private/referentiels/
+
+# Données temporaires, caches locaux et logs hôte
+storage/logs/*
+storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
-storage/app/private/*
-!storage/app/private/referentiels/
-.phpunit.cache
+!storage/logs/.gitkeep
+!storage/framework/cache/.gitkeep
+!storage/framework/sessions/.gitkeep
+!storage/framework/views/.gitkeep
+
+# Git et outils de versioning
+.git/
+.gitignore
+.gitattributes
+
+# Dépendances Composer et Node locales hôte (installées/gérées dans le conteneur)
+vendor/
+node_modules/
+
+# Outils IDE et scripts de scratch
+.idea/
+.vscode/
+scratch/
 .phpunit.result.cache
-.idea
-.vscode
-.fleet
-.zed
-Thumbs.db
-.DS_Store
+
+# Bases de données SQLite locales éventuelles
+*.sqlite

@@ -5,7 +5,9 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ContenuController;
 use App\Http\Controllers\Api\ProgressionController;
 use App\Http\Controllers\Api\QuizController;
+use App\Http\Controllers\Api\RechercheController;
 use App\Http\Controllers\Api\ReferentielController;
+use App\Http\Controllers\Api\VideoController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->group(function () {
@@ -28,6 +30,9 @@ Route::get('/series', [ReferentielController::class, 'series']);
 Route::get('/parcours', [ReferentielController::class, 'parcours']);
 
 Route::middleware('auth:sanctum')->group(function () {
+    // 0. Recherche Globale Pédagogique (Omnisearch cloisonné par parcours)
+    Route::get('/recherche-globale', [RechercheController::class, 'rechercher']);
+
     // 1. Référentiel pédagogique & Tableau de bord personnalisé
     Route::get('/dashboard', [ProgressionController::class, 'dashboard']);
     Route::get('/referentiel/document-source', [ReferentielController::class, 'downloadDocumentSource']);
@@ -36,6 +41,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/parcours/{parcours}/matieres', [ReferentielController::class, 'matieresByParcours']);
     Route::get('/matieres/{matiere}/chapitres', [ReferentielController::class, 'chapitresByMatiere']);
     Route::get('/parcours-matieres/{parcoursMatiere}/chapitres', [ReferentielController::class, 'chapitresByParcoursMatiere']);
+    Route::get('/chapitres/{id}/complet', [ReferentielController::class, 'showChapitreComplet']);
     Route::get('/chapitres/{chapitre}', [ReferentielController::class, 'showChapitre']);
 
     // 2. Consultation & Recherche des contenus pédagogiques + Traçabilité
@@ -54,6 +60,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/transcriptions/{transcription}', [ContenuController::class, 'showTranscription']);
     Route::get('/transcriptions/{transcription}/resumes', [ContenuController::class, 'resumesByTranscription']);
     Route::get('/resumes/{resume}', [ContenuController::class, 'showResume']);
+
+    // 2.bis Recherche & Intégration YouTube Data API v3 (Laravel Backend Gateway)
+    Route::get('/youtube/recherche', [VideoController::class, 'search']);
+    Route::get('/youtube/details', [VideoController::class, 'details']);
+    Route::post('/chapitres/{chapitre}/lier-video', [VideoController::class, 'lierVideoChapitre']);
 
     Route::get('/chapitres/{chapitre}/ressources', [ContenuController::class, 'ressourcesByChapitre']);
     Route::get('/ressources/{ressource}', [ContenuController::class, 'showRessource']);

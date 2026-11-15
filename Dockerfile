@@ -1,81 +1,57 @@
 # ==============================================================================
-# Dockerfile - Backend SCHOLARSHIP / ACADÉMIE (Laravel 12 + PHP 8.3 FPM + Nginx)
+# SCHOLARSHIP / ACADÉMIE - Dockerfile Backend (Laravel 12 + PHP 8.3-FPM)
+# Conçu pour un environnement de développement sécurisé et reproductible.
 # ==============================================================================
+
 FROM php:8.3-fpm-alpine
 
-LABEL maintainer="SCHOLARSHIP Backend Team"
-LABEL description="API REST Laravel 12 + PostgreSQL + Google Gemini AI"
+# Arguments de build
+ARG WWWUSER=1000
+ARG WWWGROUP=1000
 
-# Dépendances système, Nginx, Supervisor et bibliothèques de compilation PHP/PostgreSQL
-RUN apk add --no-cache \
-    bash \
+# 1. Installation des dépendances système requises pour Laravel et PostgreSQL
+RUN apk update && apk add --no-cache \
+    postgresql-dev \
+    libzip-dev \
+    zip \
+    unzip \
     curl \
     git \
-    unzip \
-    zip \
+    shadow \
+    bash \
     icu-dev \
-    libpq-dev \
-    libzip-dev \
-    oniguruma-dev \
-    libxml2-dev \
-    nginx \
-    supervisor \
-    postgresql-client \
-    && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
-    && docker-php-ext-install -j$(nproc) \
-        pdo \
-        pdo_pgsql \
-        pgsql \
-        intl \
-        mbstring \
-        zip \
-        bcmath \
-        opcache \
-        xml \
-        pcntl \
-    && rm -rf /var/cache/apk/*
+    oniguruma-dev
 
-# Installation officielle de Composer
+# 2. Installation et compilation des extensions PHP officielles
+RUN docker-php-ext-install \
+    pdo_pgsql \
+    pgsql \
+    bcmath \
+    zip \
+    intl \
+    opcache
+
+# 3. Installation de Composer (version officielle la plus récente)
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Configuration PHP & OPcache adaptée à Laravel
-COPY docker/php/php.ini /usr/local/etc/php/conf.d/99-laravel.ini
+# 4. Configuration des utilisateurs pour aligner les permissions hôte/conteneur
+RUN usermod -u ${WWWUSER} www-data && groupmod -g ${WWWGROUP} www-data
 
-# Configuration Nginx & Supervisor
-COPY docker/nginx/default.conf /etc/nginx/http.d/default.conf
-COPY docker/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
+# 5. Répertoire de travail de l'application
 WORKDIR /var/www/html
 
-# Copie préalable des manifests Composer pour optimiser le cache Docker
-COPY composer.json composer.lock ./
-RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --no-interaction
+# 6. Copie de la configuration PHP personnalisée
+COPY ./docker/php/php.ini /usr/local/etc/php/conf.d/custom.ini
 
-# Copie du code source Laravel (le .env est exclu via .dockerignore)
-COPY . .
+# 7. Copie du script d'entrée (sécurisation des permissions et démarrage propre)
+COPY ./docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# Finalisation de l'autoloader optimisé Composer
-RUN composer dump-autoload --optimize --no-dev
+# 8. Exposition du port PHP-FPM
+EXPOSE 9000
 
-# Création des répertoires d'exécution & permissions Laravel
-RUN mkdir -p \
-        storage/app/private/referentiels \
-        storage/framework/cache/data \
-        storage/framework/sessions \
-        storage/framework/views \
-        storage/logs \
-        bootstrap/cache \
-        /run/nginx \
-        /var/log/supervisor \
-    && chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+# 9. Utilisateur d'exécution par défaut
+USER www-data
 
-# Script d'entrée sécurisé (attente PostgreSQL, migrations non destructives, permissions)
-COPY docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-RUN sed -i 's/\r$//' /usr/local/bin/docker-entrypoint.sh \
-    && chmod +x /usr/local/bin/docker-entrypoint.sh
-
-EXPOSE 8000
-
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["php-fpm"]

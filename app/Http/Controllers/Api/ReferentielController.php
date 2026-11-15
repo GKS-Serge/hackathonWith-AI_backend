@@ -341,6 +341,164 @@ class ReferentielController extends Controller
     }
 
     /**
+     * Récupère la vue complète et synthétique d'un chapitre pour l'étudiant connecté (PHASE 2).
+     * Regroupe : métadonnées du chapitre, cours, vidéos intégrables, quiz disponibles,
+     * ressources complémentaires et progression personnalisée de l'étudiant.
+     */
+    public function showChapitreComplet(Request $request, int $id): JsonResponse
+    {
+        $etudiant = $request->user();
+
+        // 1. Recherche du chapitre avec ses relations structurelles
+        $chapitre = Chapitre::with([
+            'parcoursMatiere.parcours.niveau',
+            'parcoursMatiere.parcours.serie',
+            'parcoursMatiere.matiere',
+            'cours.resumes',
+            'videos.transcription',
+            'ressources',
+            'quizzes.questions',
+        ])->find($id);
+
+        if (! $chapitre) {
+            return response()->json([
+                'message' => 'Chapitre introuvable.',
+                'code' => 'CHAPITRE_NOT_FOUND',
+            ], 404);
+        }
+
+        // 2. Vérification stricte des permissions de parcours scolaire (403 Forbidden)
+        if ($etudiant && $etudiant->parcours_id) {
+            $parcoursChapitreId = $chapitre->parcoursMatiere?->parcours_id;
+            if ($parcoursChapitreId && $parcoursChapitreId !== $etudiant->parcours_id) {
+                return response()->json([
+                    'message' => 'Ce chapitre ne fait pas partie de votre parcours scolaire.',
+                    'code' => 'PARCOURS_ACCESS_DENIED',
+                ], 403);
+            }
+        }
+
+        // 3. Récupération de la progression de l'étudiant connecté pour ce chapitre (strictement personnelle)
+        $progression = Progression::where('etudiant_id', $etudiant->id)
+            ->where('chapitre_id', $chapitre->id)
+            ->first();
+
+        // 4. Consultation des cours pour cet étudiant (pour marquer déjà consulté)
+        $consultationsCours = \App\Models\ConsultationCours::where('etudiant_id', $etudiant->id)
+            ->whereIn('cours_id', $chapitre->cours->pluck('id'))
+            ->get()
+            ->keyBy('cours_id');
+
+        // 5. Tentatives de quiz pour cet étudiant
+        $tentatives = Tentative::where('etudiant_id', $etudiant->id)
+            ->whereIn('quiz_id', $chapitre->quizzes->pluck('id'))
+            ->get()
+            ->groupBy('quiz_id');
+
+        // Formatage Cours
+        $formattedCours = $chapitre->cours->map(function ($c) use ($consultationsCours) {
+            $consultation = $consultationsCours->get($c->id);
+            return [
+                'id' => $c->id,
+                'titre' => $c->titre,
+                'resume' => $c->resumes->first()?->contenu ?? null,
+                'contenu' => $c->contenu,
+                'temps_lecture_estime' => max(5, (int) ceil(str_word_count(strip_tags((string) $c->contenu)) / 200)),
+                'deja_consulte' => $consultation !== null,
+                'derniere_consultation_a' => $consultation?->date_consultation?->toIso8601String(),
+                'date_creation' => $c->date_creation?->toIso8601String(),
+            ];
+        })->values();
+
+        // Formatage Vidéos (avec a_transcription et statut conforme)
+        $formattedVideos = $chapitre->videos
+            ->where('est_integrable', true)
+            ->map(function ($v) {
+                $hasTranscription = $v->transcription !== null && !empty($v->transcription->contenu);
+                return [
+                    'id' => $v->id,
+                    'titre' => $v->titre,
+                    'description' => $v->description,
+                    'youtube_id' => $v->youtube_id,
+                    'duree' => $v->duree ?? '00:00',
+                    'duree_secondes' => $v->duree_secondes ?? 0,
+                    'thumbnail_url' => $v->thumbnail_url,
+                    'embed_url' => $v->embed_url,
+                    'chaine_titre' => $v->chaine_titre,
+                    'a_transcription' => $hasTranscription,
+                    'statut_transcription' => $hasTranscription ? 'DISPONIBLE' : 'NON_DISPONIBLE_POUR_LE_MOMENT',
+                ];
+            })->values();
+
+        // Formatage Quiz
+        $formattedQuizzes = $chapitre->quizzes->map(function ($q) use ($tentatives) {
+            $quizTentatives = $tentatives->get($q->id, collect());
+            $meilleureNote = $quizTentatives->max('note');
+            $hasSuccess = $quizTentatives->where('note', '>=', 60.0)->isNotEmpty();
+
+            return [
+                'id' => $q->id,
+                'titre' => $q->titre,
+                'description' => $q->description,
+                'type' => $q->type,
+                'nombre_questions' => $q->questions->count(),
+                'tentatives_effectuees' => $quizTentatives->count(),
+                'meilleur_score' => $meilleureNote !== null ? (float) $meilleureNote : null,
+                'statut' => $quizTentatives->isEmpty()
+                    ? 'NON_COMMENCE'
+                    : ($hasSuccess ? 'REUSSI' : 'A_REVOIR'),
+            ];
+        })->values();
+
+        // Formatage Ressources Complémentaires (PDF)
+        $formattedRessources = $chapitre->ressources->map(function ($r) {
+            return [
+                'id' => $r->id,
+                'titre' => $r->titre,
+                'type' => $r->type ?? 'DOCUMENT',
+                'url' => $r->url,
+                'disponible' => !empty($r->url),
+            ];
+        })->values();
+
+        // Formatage Réponse Globale
+        return response()->json([
+            'chapitre' => [
+                'id' => $chapitre->id,
+                'titre' => $chapitre->titre,
+                'description' => $chapitre->description,
+                'position' => $chapitre->ordre,
+                'statut_validation' => $chapitre->statut_validation,
+                'est_demo' => (bool) $chapitre->est_demo,
+                'matiere' => [
+                    'id' => $chapitre->parcoursMatiere?->matiere?->id,
+                    'nom' => $chapitre->parcoursMatiere?->matiere?->nom,
+                    'code' => $chapitre->parcoursMatiere?->matiere?->code,
+                ],
+                'parcours' => [
+                    'id' => $chapitre->parcoursMatiere?->parcours?->id,
+                    'nom' => $chapitre->parcoursMatiere?->parcours?->nom,
+                    'niveau' => $chapitre->parcoursMatiere?->parcours?->niveau?->nom,
+                    'serie' => $chapitre->parcoursMatiere?->parcours?->serie?->nom,
+                ],
+            ],
+            'progression' => [
+                'etudiant_id' => $etudiant->id,
+                'chapitre_id' => $chapitre->id,
+                'pourcentage' => $progression ? (float) $progression->pourcentage : 0.0,
+                'statut' => $progression ? $progression->statut : Progression::STATUT_NON_COMMENCE,
+                'cours_consulte' => $consultationsCours->isNotEmpty(),
+                'quiz_reussi' => $formattedQuizzes->where('statut', 'REUSSI')->isNotEmpty(),
+                'derniere_activite_a' => $progression?->derniere_consultation?->toIso8601String(),
+            ],
+            'cours' => $formattedCours,
+            'videos' => $formattedVideos,
+            'quizzes' => $formattedQuizzes,
+            'ressources' => $formattedRessources,
+        ]);
+    }
+
+    /**
      * Récupère les chapitres d'un ParcoursMatiere enrichis de la progression de l'étudiant.
      */
     private function getChapitresWithStudentProgression(int $parcoursMatiereId, int $etudiantId, bool $inclureDemo = true)
